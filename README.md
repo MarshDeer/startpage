@@ -1,5 +1,5 @@
 # Personal startpage
 
-[Live Demo](MarshDeer.github.io/startpage)
+[Live Demo](http://MarshDeer.github.io/startpage)
 
 ![Screenshot](screenshot.png)
