@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>lena@home</title>
+	<head>
+
+	<style>
+		/* Gruvbox Dark */
+		:root{
+			--bg0h:				#1d2021;
+			--bg0:				#282828;
+			--bg0s:				#32302f;
+			--bg1:				#3c3836;
+			--bg2:				#504945;
+			--bg3:				#665c54;
+			--bg4:				#7c6f64;
+			--gray:				#928374;
+			--fg0:				#fbf1c7;
+			--fg1:				#ebdbb2;
+			--fg2:				#d5c4a1;
+			--fg3:				#bdae93;
+			--fg4:				#a89984;
+			--red:				#fb4934;
+			--green:			#b8bb26;
+			--yellow:			#fabd2f;
+			--blue:				#83a598;
+			--purple:			#d3869b;
+			--aqua:				#8ec07c;
+			--orange:			#fe8019;
+			--dred:				#cc241d;
+			--dgreen:			#98971a;
+			--dyellow:			#d79921;
+			--dblue:			#458588;
+			--dpurple:			#b16286;
+			--daqua:			#689d6a;
+			--dorange:			#d65d0e;
+		}
+
+		html {
+			align-items:			center;
+			background-color:		var(--bg0h);
+			background-image:		url(bg.png);
+			background-size:		cover;
+			color:				var(--fg1);
+			font:				12px/1 "Inconsolata", monospace;
+			line-height:			1.2;
+			display:			flex;
+			height:				100%;
+			justify-content:		center;
+		}
+
+		#term {
+			background-color:		var(--bg0);
+			display:			flex;
+			flex-direction:			column;
+			min-height:			30ch;
+			min-width:			50vw;
+			padding:			2em;
+			border:				2px solid var(--aqua);
+			float:				left;
+		}
+
+		p {
+			margin:				0;
+		}
+
+			p .prompt {
+				color:			var(--bg0);
+				background-color:	var(--aqua);
+			}
+
+				animation:		blink 1.5s infinite;
+				background-color:	var(--fg1);
+			}
+
+			p .arrow {
+				color:			var(--aqua);
+			}
+
+				@keyframes blink {
+					0% {opacity: 0;}
+					49% {opacity: 0;}
+					50% {opacity: 1;}
+				}
+
+		a {
+			color:				inherit;
+			text-decoration:		none;
+		}
+
+		ul {
+			list-style-type:		none;
+			margin:				0;
+			padding:			0;
+		}
+			ul:nth-child(1n) li:first-child {background-color:var(--dred);}
+			ul:nth-child(2n) li:first-child {background-color:var(--dorange);}
+			ul:nth-child(3n) li:first-child {background-color:var(--dyellow);}
+			ul:nth-child(4n) li:first-child {background-color:var(--daqua);}
+			ul:nth-child(5n) li:first-child {background-color:var(--dgreen);}
+			ul:nth-child(6n) li:first-child {background-color:var(--dblue);}
+			ul:nth-child(7n) li:first-child {background-color:var(--dpurple);}
+			li:first-child {color: var(--bg0);}
+			li:last-child {margin: 0 0 1em;}
+
+		nav {
+			column-gap:			2em;
+			display:			grid;
+			grid-template-columns:		auto auto auto auto;
+			padding:			1em 0 0 0;
+		}
+
+		#window {
+			border:				2px solid var(--aqua);
+			float:				right;
+			margin:				0 2em;
+			overflow:			hidden;
+			width:				10em;
+			height:				27em;
+		}
+
+			#window img {
+				width:			100%;
+				height:			100%;
+				object-fit:		cover;
+			}
+	</style>
+
+	<body>
+		<!-- Terminal -->
+		<div id="term">
+			<p><span class="prompt">lena@home</span> <span class="arrow">&gt;</span> ls links</p>
+
+			<nav>
+				<ul>
+					<li>&gt; Server</li>
+						<li><a href="http://lensserver:2000">RSS</a></li>
+						<li><a href="http://192.168.1.104:8096">Jelly</a></li>
+				</ul>
+
+				<ul>
+					<li>&gt; Torrents</li>
+						<li><a href="http://jpopsuki.eu">JPopSuki</a></li>
+						<li><a href="http://sugoimusic.me">SugoiMusic</a></li>
+						<li><a href="http://rutracker.org">RuTracker</a></li>
+						<li><a href="http://nyaa.si">Nyaa</a></li>
+						<li><a href="http://rarbg.to">RarBG</a></li>
+				</ul>
+
+				<ul>
+					<li>&gt; Reading</li>
+						<li><a href="http://goodreads.com">GoodReads</a></li>
+						<li><a href="http://libgen.lc">Libgen</a></li>
+						<li><a href="http://sci-hub.ru">SciHub</a></li>
+				</ul>
+
+				<ul>
+					<li>&gt; Productivity</li>
+						<li><a href="http://mail.google.com">Mail</a></li>
+						<li><a href="http://linkedin.com">LinkedIn</a></li>
+						<li><a href="http://banco.santander.cl">Bank</a></li>
+						<li><a href="https://docs.google.com/spreadsheets/d/1FBEoaX2sqEymWZ7Db0Ovm1BxI6jcxKMlRgopsUzQQBM/edit?usp=sharing">Expenses</a></li>
+				</ul>
+
+				<ul>
+					<li>&gt; Feeds</li>
+						<li><a href="http://reddit.com">Reddit</a></li>
+						<li><a href="http://youtube.com">YT</a></li>
+						<li><a href="http://pinterest.com">Pinterest</a></li>
+				</ul>
+
+				<ul>
+					<li>&gt; Fun</li>
+					<li><a href="http://monkeytype.com">MonkeyType</a><li>
+				</ul>
+
+				<ul>
+					<li>&gt; Programming</li>
+					<li><a href="http://github.com">GitHub</a><li>
+				</ul>
+			</nav>
+
+			<!-- Kitty! -->
+			<div style="margin: 0 0 1em 0;">
+				&nbsp;／l、<br>
+				(⠁、・7<br>
+				&nbsp;|、 ~ヽ<br>
+				&nbsp;じしf_,)ノ<br>
+			</div>
+			<p><span class="prompt">lena@home</span> <span class="arrow">&gt;</span> start<span class="cursor">_</span></p>
+		</div>
+
+		<div id="window">
+			<img src="window.jpg">
+		</div>
+	</body>
+</html>
