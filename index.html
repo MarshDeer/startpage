@@ -70,19 +70,9 @@
 				background-color:	var(--aqua);
 			}
 
-				animation:		blink 1.5s infinite;
-				background-color:	var(--fg1);
-			}
-
 			p .arrow {
 				color:			var(--aqua);
 			}
-
-				@keyframes blink {
-					0% {opacity: 0;}
-					49% {opacity: 0;}
-					50% {opacity: 1;}
-				}
 
 		a {
 			color:				inherit;
@@ -125,13 +115,33 @@
 				height:			100%;
 				object-fit:		cover;
 			}
+
+		@media screen and (max-width: 700px) {
+			body {
+				padding:		1em;
+			}
+
+			#window, #term {
+				width: 			80vw;
+			}
+
+			#window {
+				max-height:		10em;
+				margin-top:		1em;
+				float:			left;
+			}
+
+			nav {
+				grid-template-columns:	40% 40%;	
+				grid-column-gap:	20%;
+			}
+		}
 	</style>
 
 	<body>
 		<!-- Terminal -->
 		<div id="term">
 			<p><span class="prompt">lena@home</span> <span class="arrow">&gt;</span> ls links</p>
-
 			<nav>
 				<ul>
 					<li><a href="http://192.168.1.104:80">&gt; Server</a></li>
@@ -194,7 +204,11 @@
 		</div>
 
 		<div id="window">
-			<img src="window.jpg">
+			<picture>
+				<source srcset="horizontal.png" media="(max-width: 700px)">
+				<source srcset="vertical.jpg">
+				<img src="vertical.jpg">
+			</picture>
 		</div>
 	</body>
 </html>
