@@ -7,7 +7,7 @@
 
 	<style>
 		/* Gruvbox Dark */
-		:root{
+		:root {
 			--bg0h:				#1d2021;
 			--bg0:				#282828;
 			--bg0s:				#32302f;
@@ -37,6 +37,11 @@
 			--dorange:			#d65d0e;
 		}
 
+		@font-face {
+			font-family:			agave;
+			src:				url(agavenerdmono.ttf);
+		}
+
 		html {
 			align-items:			center;
 			background-color:		var(--bg0h);
@@ -64,14 +69,33 @@
 		p {
 			margin:				0;
 		}
+		
+			.host {
+				color:			var(--bg0);
+				background-color:	var(--purple);
+			}
 
-			p .prompt {
+				.hostdiags {
+					color:		var(--purple);
+					font-family:	agave;
+					font-size:	15px;
+				}
+
+			.folder {
 				color:			var(--bg0);
 				background-color:	var(--aqua);
 			}
 
-			p .arrow {
-				color:			var(--aqua);
+				.folderdiags {
+					color:		var(--aqua);
+					font-family:	agave;
+					font-size:	15px;
+				}
+
+			.slash {
+				color:			var(--blue);
+				font-family:		agave;
+				font-size:		15px;
 			}
 
 		a {
@@ -141,7 +165,7 @@
 	<body>
 		<!-- Terminal -->
 		<div id="term">
-			<p><span class="prompt">lena@home</span> <span class="arrow">&gt;</span> ls links</p>
+			<p><span class="hostdiags"></span><span class="host">home</span><span class="hostdiags"></span><span class="folderdiags"></span><span class="folder">~</span><span class="folderdiags"></span><span class="slash"></span> ls links</p>
 			<nav>
 				<ul>
 					<li><a href="http://192.168.1.104:80">&gt; Server</a></li>
@@ -200,7 +224,7 @@
 				&nbsp;|、 ~ヽ<br>
 				&nbsp;じしf_,)ノ<br>
 			</div>
-			<p><span class="prompt">lena@home</span> <span class="arrow">&gt;</span> start<span class="cursor">_</span></p>
+			<p><span class="hostdiags"></span><span class="host">home</span><span class="hostdiags"></span><span class="folderdiags"></span><span class="folder">~</span><span class="folderdiags"></span><span class="slash"></span> start_</p>
 		</div>
 
 		<div id="window">
