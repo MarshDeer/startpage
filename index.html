@@ -6,7 +6,7 @@
 	</head>
 
 	<style>
-		/* Gruvbox Dark */
+	/* Gruvbox Dark */
 		:root {
 			--bg0h:				#1d2021;
 			--bg0:				#282828;
@@ -42,6 +42,7 @@
 			src:				url(agavenerdmono.ttf);
 		}
 
+	/* Desktop view */
 		html {
 			align-items:			center;
 			background-color:		var(--bg0h);
@@ -144,12 +145,14 @@
 			margin:				0 0 1em 0;
 		}
 
+	/* Mobile view */
 		@media screen and (max-width: 700px) {
 			body {
 				padding:		1em;
 			}
 
-			#window, #term {
+			#window,
+			#term {
 				width: 			80vw;
 			}
 
@@ -166,6 +169,12 @@
 
 			#kitty {
 				display:		none;
+			}
+
+			.hostdiags,
+			.folderdiags,
+			.slash {
+				font-size:		13px;
 			}
 		}
 	</style>
