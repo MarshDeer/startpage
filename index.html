@@ -134,7 +134,7 @@
 		#window {
 			border:				2px solid var(--aqua);
 			float:				right;
-			margin:				0 2em;
+			margin-left:			1em;
 			overflow:			hidden;
 			width:				10em;
 			height:				27em;
@@ -151,7 +151,11 @@
 		}
 
 	/* Mobile view */
-		@media screen and (max-width: 700px) {
+		@media screen and (max-width: 720px) {
+			html {
+				font-size:		12px;
+			}
+
 			body {
 				padding:		1em;
 			}
@@ -179,7 +183,7 @@
 			.hostdiags,
 			.folderdiags,
 			.slash {
-				font-size:		15px;
+				font-size:		11px;
 			}
 		}
 	</style>
@@ -251,7 +255,7 @@
 
 		<div id="window">
 			<picture>
-				<source srcset="horizontal.png" media="(max-width: 700px)">
+				<source srcset="horizontal.png" media="(max-width: 720px)">
 				<source srcset="vertical.jpg">
 				<img src="vertical.jpg">
 			</picture>
