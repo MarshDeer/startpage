@@ -42,11 +42,6 @@
 			src:				url(agavenerdmono.ttf);
 		}
 
-		@font-face {
-			font-family:			inconsolata;
-			src:				url(inconsolatanerdmono.ttf);
-		}
-
 	/* Desktop view */
 		html {
 			align-items:			center;
@@ -54,7 +49,7 @@
 			background-image:		url(bg.png);
 			background-size:		cover;
 			color:				var(--fg1);
-			font:				15px inconsolata, monospace;
+			font:				13px agave, monospace;
 			line-height:			1.2;
 			display:			flex;
 			height:				100%;
@@ -84,7 +79,7 @@
 				.hostdiags {
 					color:		var(--purple);
 					font-family:	agave;
-					font-size:	15px;
+					font-size:	11px;
 				}
 
 			.folder {
@@ -95,13 +90,13 @@
 				.folderdiags {
 					color:		var(--aqua);
 					font-family:	agave;
-					font-size:	15px;
+					font-size:	11px;
 				}
 
 			.slash {
 				color:			var(--blue);
 				font-family:		agave;
-				font-size:		15px;
+				font-size:		11px;
 			}
 
 		a {
@@ -136,8 +131,8 @@
 			float:				right;
 			margin-left:			1em;
 			overflow:			hidden;
-			width:				10em;
-			height:				27em;
+			width:				12em;
+			height:				30em;
 		}
 
 			#window img {
@@ -146,16 +141,13 @@
 				object-fit:		cover;
 			}
 
-		#kitty {
+		#deer {
 			margin:				0 0 1em 0;
+			font:				12px agave;
 		}
 
 	/* Mobile view */
-		@media screen and (max-width: 720px) {
-			html {
-				font-size:		12px;
-			}
-
+		@media screen and (max-width: 730px) {
 			body {
 				padding:		1em;
 				display:		grid;
@@ -168,17 +160,17 @@
 			}
 
 			#window {
-				max-height:		10em;
+				max-height:		12em;
 				margin:			1em auto;
 				float:			left;
 			}
 
 			nav {
-				grid-template-columns:	40% 40%;	
-				grid-column-gap:	20%;
+				grid-template-columns:	30% 30% 30%;	
+				grid-column-gap:	5%;
 			}
 
-			#kitty {
+			#deer {
 				display:		none;
 			}
 
@@ -186,6 +178,17 @@
 			.folderdiags,
 			.slash {
 				font-size:		11px;
+			}
+		}
+
+		@media screen and (max-width: 470px) {
+			nav {
+				grid-template-columns:	40% 40%;
+				grid-column-gap:	20%;
+			}
+			
+			#window {
+				max-height:		10em;
 			}
 		}
 	</style>
@@ -245,19 +248,21 @@
 				</ul>
 			</nav>
 
-			<!-- Kitty! -->
-			<div id="kitty">
-				&nbsp;／l、<br>
-				(⠁、・7<br>
-				&nbsp;|、 ~ヽ<br>
-				&nbsp;じしf_,)ノ<br>
+			<div id="deer">
+				(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)<br>
+				&nbsp;`--(_&nbsp;&nbsp;&nbsp;_)--'<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y-Y<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/uu \<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;`--'.&nbsp;&nbsp;\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;`._____/)<br>
 			</div>
 			<p><span class="hostdiags"></span><span class="host">home</span><span class="hostdiags"></span><span class="folderdiags"></span><span class="folder">~</span><span class="folderdiags"></span><span class="slash"></span> start_</p>
 		</div>
 
 		<div id="window">
 			<picture>
-				<source srcset="horizontal.png" media="(max-width: 720px)">
+				<source srcset="horizontal.png" media="(max-width: 730px)">
 				<source srcset="vertical.jpg">
 				<img src="vertical.jpg">
 			</picture>
