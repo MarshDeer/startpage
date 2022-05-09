@@ -5,7 +5,20 @@
 	</head>
 
 	<style>
-	/* Gruvbox Dark */
+	/* Themes */
+		:root {
+			--bgimgdark:			url(img/bgdark.png);
+			--bgimglight:			url(img/bglight.png);
+		}
+
+		div:not(html),
+		li,
+		a,
+		p,
+		span {
+			transition:			0.5s;
+		}
+
 		.dark {
 			--bg0h:				#1d2021;
 			--bg0:				#282828;
@@ -75,7 +88,7 @@
 		html {
 			align-items:			center;
 			background-color:		var(--bg0h);
-			background-image:		url(img/bg.png);
+			background-image:		var(--bgimgdark);
 			background-size:		cover;
 			font:				13px agave, monospace;
 			line-height:			1.2;
