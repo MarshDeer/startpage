@@ -9,6 +9,9 @@
 		:root {
 			--bgimgdark:			url(img/bgdark.png);
 			--bgimglight:			url(img/bglight.png);
+			--bgcolordark:			#1d2021;
+			--bgcolorlight:			#f9f5d7;
+			--bgimg:			var(--bgimgdark);
 		}
 
 		div:not(html),
@@ -31,8 +34,8 @@
 	/* Desktop view */
 		html {
 			align-items:			center;
-			background-color:		var(--bg0h);
-			background-image:		var(--bgimgdark);
+			background-color:		var(--bgcolor);
+			background-image:		var(--bgimg);
 			background-size:		cover;
 			font:				13px agave, monospace;
 			line-height:			1.2;
@@ -269,10 +272,23 @@
 		</div>
 	</body>
 	<script>
+		const body = document.body;
+		const r = document.querySelector(':root');
+		let t = 'dark';
 		function themetoggle() {
-			var body = document.body
+			if(t = 'dark') {
+				r.style.setProperty('background-image', 'var(--bgimglight');
+				r.style.setProperty('background-color', 'var(--bgcolorlight)');
+				let t = 'light';
+			}
+			else if(t = 'light') {
+				r.style.setProperty('background-image', 'var(--bgimgdark');
+				r.style.setProperty('background-color', 'var(--bgcolordark');
+				let t = 'dark';
+			}
 			body.classList.toggle('dark');
 			body.classList.toggle('light');
+			console.log(t);
 		}
 	</script>
 </html>
