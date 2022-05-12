@@ -1,0 +1,181 @@
+/* Themes */
+        div:not(html),
+        li,
+        a,
+        p,
+        span {
+                transition:			0.2s;
+        }
+
+        .dark {--bg0h:#1d2021;--bg0:#282828;--bg0s:#32302f;--bg1:#3c3836;--bg2:#504945;--bg3:#665c54;--bg4:#7c6f64;--gray:#928374;--fg0:#fbf1c7;--fg1:#ebdbb2;--fg2:#d5c4a1;--fg3:#bdae93;--fg4:#a89984;--red:#fb4934;--green:#b8bb26;--yellow:#fabd2f;--blue:#83a598;--purple:#d3869b;--aqua:#8ec07c;--orange:#fe8019;--dred:#cc241d;--dgreen:#98971a;--dyellow:#d79921;--dblue:#458588;--dpurple:#b16286;--daqua:#689d6a;--dorange:#d65d0e;--bgimg:url(../img/bgdark.png);}
+
+        .light {--bg0h:#f9f5d7;--bg0:#fbf1c7;--bg0s:#f2e5bc;--bg1:#ebdbb2;--bg2:#d5c4a1;--bg3:#bdae93;--bg4:#a89984;--gray:#928374;--fg0:#282828;--fg1:#3c3836;--fg2:#504945;--fg3:#665c54;--fg4:#7c6f64;--red:#9d0006;--green:#79740e;--yellow:#b57614;--blue:#076678;--purple:#8f3f71;--aqua:#427b58;--orange:#af3a03;--dred:#cc241d;--dgreen:#98971a;--dyellow:#d79921;--dblue:#458588;--dpurple:#b16286;--daqua:#689d6a;--dorange:#d65d0e;--bgimg:url(../img/bglight.png);}
+
+        @font-face {
+                font-family:			agave;
+                src:				url(../font/agavenerdmono.ttf);
+        }
+
+/* Desktop view */
+        html {
+                align-items:			center;
+                font:				13px agave, monospace;
+                line-height:			1.2;
+                display:			flex;
+                height:				100%;
+                justify-content:		center;
+        }
+
+        body {
+                background-color:		var(--bgcolor);
+                background-image:		var(--bgimg);
+                background-size:		cover;
+        }
+
+        #term {
+                background-color:		var(--bg0);
+                display:			flex;
+                flex-direction:			column;
+                min-height:			30ch;
+                min-width:			50vw;
+                padding:			2em;
+                border:				2px solid var(--aqua);
+                float:				left;
+        }
+
+        p {
+                margin:				0;
+                color:				var(--fg1);
+        }
+
+                .host {
+                        color:			var(--bg0);
+                        background-color:	var(--purple);
+                }
+
+                        .hostdiags {
+                                color:		var(--purple);
+                                font-family:	agave;
+                                font-size:	11px;
+                        }
+
+                .folder {
+                        color:			var(--bg0);
+                        background-color:	var(--aqua);
+                }
+
+                        .folderdiags {
+                                color:		var(--aqua);
+                                font-family:	agave;
+                                font-size:	11px;
+                        }
+
+                .slash {
+                        color:			var(--blue);
+                        font-family:		agave;
+                        font-size:		11px;
+                }
+
+        a {
+                color:				var(--fg1);
+                text-decoration:		none;
+        }
+
+        ul {
+                list-style-type:		none;
+                margin:				0;
+                padding:			0;
+        }
+                ul:nth-child(1n) li:first-child {background-color:var(--dred);}
+                ul:nth-child(2n) li:first-child {background-color:var(--dorange);}
+                ul:nth-child(3n) li:first-child {background-color:var(--dyellow);}
+                ul:nth-child(4n) li:first-child {background-color:var(--daqua);}
+                ul:nth-child(5n) li:first-child {background-color:var(--dgreen);}
+                ul:nth-child(6n) li:first-child {background-color:var(--dblue);}
+                ul:nth-child(7n) li:first-child {background-color:var(--dpurple);}
+                li:first-child {color: var(--bg0); margin-left:-1em;}
+                li:first-child a {color: var(--bg0);}
+                li:last-child {margin: 0 0 1em;}
+
+        nav {
+                column-gap:			2em;
+                display:			grid;
+                grid-template-columns:		auto auto auto auto;
+                padding:			1em 0 0 0;
+        }
+
+        #window {
+                border:				2px solid var(--aqua);
+                float:				right;
+                margin-left:			1em;
+                overflow:			hidden;
+                width:				12em;
+                height:				30em;
+        }
+
+                #window img {
+                        width:			100%;
+                        height:			100%;
+                        object-fit:		cover;
+                }
+
+        #deer {
+                margin:				0 0 1em 0;
+                color:				var(--fg1);
+                font:				12px agave;
+        }
+
+/* Mobile view */
+        @media screen and (max-width: 730px) {
+                html {
+                        font-size:		11px;
+                }
+
+                main {
+                        padding:		1em;
+                        display:		grid;
+                        align-items:		center;
+                }
+
+                #window,
+                #term {
+                        width: 			80vw;
+                }
+
+                #window {
+                        max-height:		12em;
+                        margin:			1em auto;
+                        float:			left;
+                }
+
+                nav {
+                        grid-template-columns:	30% 30% 30%;
+                        grid-column-gap:	5%;
+                }
+
+                #deer {
+                        display:		none;
+                }
+
+                .hostdiags,
+                .folderdiags,
+                .slash {
+                        font-size:		11px;
+                }
+        }
+
+        @media screen and (max-width: 470px) {
+                nav {
+                        grid-template-columns:	40% 40%;
+                        grid-column-gap:	20%;
+                }
+
+                #window {
+                        max-height:		10em;
+                }
+        }
+
+        @media screen and (max-width: 400px) {
+                #window {
+                        max-height:		8em;
+                }
