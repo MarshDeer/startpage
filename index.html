@@ -1,10 +1,12 @@
+<html>
 	<head>
 		<title>lena@home</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 
-	<body>
+	<body class="dark">
+	<main class="dark">
 		<!-- Terminal -->
 		<div id="term">
 			<p><span class="hostdiags"></span><span class="host">home</span><span class="hostdiags"></span><span class="folderdiags"></span><span class="folder">~</span><span class="folderdiags"></span><span class="slash"></span> ls links</p>
@@ -51,7 +53,8 @@
 				<ul>
 					<li> Fun</li>
 					<li><a href="http://monkeytype.com">MonkeyType</a><li>
-					<li><a href="https://ruwix.com/online-rubiks-stopwatch-timer/">Cube Timer</a><li>
+					<li><a href="https://ruwix.com/online-rubiks-stopwatch-timer/">Ruwix Timer</a><li>
+					<li><a href="https://cleanup.pictures/">cleanup.pictures</a><li>
 				</ul>
 
 				<ul>
@@ -73,11 +76,15 @@
 		</div>
 
 		<div id="window">
-			<picture>
-				<source srcset="img/horizontal.png" media="(max-width: 730px)">
-				<source srcset="img/vertical.jpg">
-				<img src="img/vertical.jpg">
-			</picture>
+			<a onclick="themetoggle()">
+				<picture>
+					<source srcset="img/horizontal.png" media="(max-width: 730px)">
+					<source srcset="img/vertical.jpg">
+					<img src="img/vertical.jpg">
+				</picture>
+			</a>
 		</div>
+	</main>
 	</body>
+	<script src="js/theme.js"></script>
 </html>
