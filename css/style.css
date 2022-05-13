@@ -1,9 +1,5 @@
 /* Themes */
-        div:not(html),
-        li,
-        a,
-        p,
-        span {
+        * {
                 transition:			0.2s;
         }
 
@@ -30,6 +26,8 @@
         body {
                 background-color:		var(--bgcolor);
                 background-size:		cover;
+		display:			grid;
+		grid-template-columns:		auto auto;
         }
 		body.dark {background-image:url(../img/bgdark.png);}
 		body.light {background-image:url(../img/bglight.png);}
@@ -106,23 +104,22 @@
                 padding:			1em 0 0 0;
         }
 
-        #window {
+        aside {
                 border:				2px solid var(--aqua);
                 float:				right;
                 margin-left:			1em;
                 overflow:			hidden;
                 width:				12em;
-                height:				30em;
 		opacity:			90%;
         }
 
-                #window img {
+                aside img {
                         width:			100%;
                         height:			100%;
                         object-fit:		cover;
                 }
 
-        #deer {
+        pre {
                 margin:				0 0 1em 0;
                 color:				var(--fg1);
                 font:				12px agave;
@@ -134,19 +131,22 @@
                         font-size:		11px;
                 }
 
+		body {
+			display:		grid;
+			grid-template-columns:	auto;
+		}
 
-                main {
-                        padding:		1em;
+                #term {
                         display:		grid;
                         align-items:		center;
                 }
 
-                #window,
+                aside,
                 #term {
                         width: 			80vw;
                 }
 
-                #window {
+                aside {
                         max-height:		12em;
                         margin:			1em auto;
                         float:			left;
@@ -157,7 +157,7 @@
                         grid-column-gap:	5%;
                 }
 
-                #deer {
+                pre {
                         display:		none;
                 }
 
@@ -174,12 +174,12 @@
                         grid-column-gap:	20%;
                 }
 
-                #window {
+                aside {
                         max-height:		10em;
                 }
         }
 
         @media screen and (max-width: 400px) {
-                #window {
+                aside {
                         max-height:		8em;
                 }
