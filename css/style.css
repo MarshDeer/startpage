@@ -32,7 +32,7 @@
 		body.dark {background-image:url(../img/bgdark.png);}
 		body.light {background-image:url(../img/bglight.png);}
 
-        #term {
+        main {
                 background-color:		var(--bg0t);
                 display:			flex;
                 flex-direction:			column;
@@ -136,13 +136,13 @@
 			grid-template-columns:	auto;
 		}
 
-                #term {
+                main {
                         display:		grid;
                         align-items:		center;
                 }
 
                 aside,
-                #term {
+                main {
                         width: 			80vw;
                 }
 
