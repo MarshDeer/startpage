@@ -1,5 +1,5 @@
 /* Themes */
-        * {
+        *|*:not(#oneko) {
                 transition:			0.2s;
         }
 
