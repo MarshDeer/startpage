@@ -166,10 +166,6 @@
                 .slash {
                         font-size:		11px;
                 }
-
-		#oneko {
-			display:		none;
-		}
         }
 
         @media screen and (max-width: 470px) {
