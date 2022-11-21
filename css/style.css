@@ -1,4 +1,5 @@
 /* Themes */
+	/* Avoid eldritch horror animations */
         *|*:not(#oneko) {
                 transition:			0.2s;
         }
