@@ -15,8 +15,8 @@ Pixelart clouds and Great Wave background are placeholders for whenever I get th
 ## Screenshots
 Device|Dark Mode|Light Mode
 :---:|:---:|:---:
-Desktop|<img src="scrot/deskscrotdark.png" style="width:600px;">|<img src="scrot/deskscrotlight.png" style="width:600px;">
-Mobile|<img src="scrot/phonescrotdark.png" style="height:500px;">|<img src="scrot/phonescrotlight.png" style="width:600px;">
+Desktop|<img src="scrot/deskscrotdark.png">|<img src="scrot/deskscrotlight.png">
+Mobile|<img src="scrot/phonescrotdark.png">|<img src="scrot/phonescrotlight.png">
 
 ## Acknowledgements
 * [oneko.js](https://github.com/adryd325/oneko.js) by [adryd325](https://github.com/adryd325). Copyright © 2022 Adryd. [MIT License](https://github.com/adryd325/oneko.js/blob/main/LICENSE).
