@@ -21,6 +21,7 @@
                 line-height:			1.2;
                 display:			flex;
                 height:				100%;
+		overflow-y:			hidden !important; /* why the hell is this necessary? */
                 justify-content:		center;
         }
 
@@ -30,6 +31,7 @@
 		background-image:		var(--background);
 		display:			grid;
 		grid-template-columns:		auto auto;
+		column-gap:			2ch;
         }
 
         main {
@@ -55,7 +57,6 @@
 
                         .hostdiags {
                                 color:		var(--purple);
-                                font-family:	agave;
                                 font-size:	11px;
                         }
 
@@ -66,13 +67,11 @@
 
                         .folderdiags {
                                 color:		var(--aqua);
-                                font-family:	agave;
                                 font-size:	11px;
                         }
 
                 .slash {
                         color:			var(--blue);
-                        font-family:		agave;
                         font-size:		11px;
                 }
 
@@ -86,6 +85,7 @@
                 margin:				0;
                 padding:			0;
         }
+
                 ul:nth-child(1n) li:first-child {background-color:var(--dred);}
                 ul:nth-child(2n) li:first-child {background-color:var(--dorange);}
                 ul:nth-child(3n) li:first-child {background-color:var(--dyellow);}
@@ -93,23 +93,48 @@
                 ul:nth-child(5n) li:first-child {background-color:var(--dgreen);}
                 ul:nth-child(6n) li:first-child {background-color:var(--dblue);}
                 ul:nth-child(7n) li:first-child {background-color:var(--dpurple);}
-                li:first-child {color: var(--bg0); margin-left:-1em;}
-                li:first-child a {color: var(--bg0);}
-                li:last-child {margin: 0 0 1em;}
+
+                li:first-child {
+			color:			var(--bg0);
+			margin-left:		-2ch;
+			margin-right:		7ch;
+			position:		relative;
+		}
+
+			li:first-child a {color: var(--bg0);}
+
+			li:first-child::before {
+				content:		" ";
+			}
+
+			li:first-child::after {
+				content:		"";
+				position:		absolute;
+				right:			-1ch
+			}
+
+				ul:nth-child(1n) li:first-child::after {color:var(--dred);}
+				ul:nth-child(2n) li:first-child::after {color:var(--dorange);}
+				ul:nth-child(3n) li:first-child::after {color:var(--dyellow);}
+				ul:nth-child(4n) li:first-child::after {color:var(--daqua);}
+				ul:nth-child(5n) li:first-child::after {color:var(--dgreen);}
+				ul:nth-child(6n) li:first-child::after {color:var(--dblue);}
+				ul:nth-child(7n) li:first-child::after {color:var(--dpurple);}
+
 
         nav {
-                column-gap:			2em;
+		row-gap:			1em;
                 display:			grid;
                 grid-template-columns:		auto auto auto auto;
                 padding:			1em 0 0 0;
+		margin-left:			2ch;
         }
 
         aside {
                 border:				2px solid var(--aqua);
                 float:				right;
-                margin-left:			1em;
                 overflow:			hidden;
-                width:				12em;
+                width:				24ch;
 		opacity:			90%;
         }
 
