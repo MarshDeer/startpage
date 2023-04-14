@@ -104,13 +104,13 @@
 			li:first-child a {color: var(--bg0);}
 
 			li:first-child::before {
-				content:		" ";
+				content:	" ";
 			}
 
 			li:first-child::after {
-				content:		"";
-				position:		absolute;
-				right:			-1ch
+				content:	"";
+				position:	absolute;
+				right:		-1ch
 			}
 
 				ul:nth-child(1n) li:first-child::after {color:var(--dred);}
