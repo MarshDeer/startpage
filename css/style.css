@@ -149,6 +149,11 @@
                 color:				var(--fg1);
                 font:				12px agave;
         }
+	
+	main,
+	aside {
+		backdrop-filter:		blur(1px);
+	}
 
 /* Mobile view */
         @media screen and (max-width: 730px) {
