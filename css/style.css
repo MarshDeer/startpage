@@ -50,23 +50,17 @@
                 color:				var(--fg1);
         }
 
-                .host {
+                .host, .folder, .slash {
                         color:			var(--bg0);
-                        background-color:	var(--purple);
                 }
 
-                .folder {
-                        color:			var(--bg0);
-                        background-color:	var(--aqua);
-                }
+		.host {background-color:var(--purple);}
+		.folder {background-color:var(--aqua);}
+		.slash {background-color:var(--blue);}
 
-			.host::before, .host::after, .folder::before, .folder::after {font-size:larger;}
-			.host::after, .folder::after {content:"";}
-			.host::before, .folder::before  {content:"";}
-
-		.slash {
-                        color:			var(--blue);
-                }
+			.host::before, .host::after, .folder::before, .folder::after, .slash::before, .slash::after {font-size:larger;}
+			.host::after, .folder::after, .slash::after {content:"";}
+			.host::before, .folder::before, .slash::before  {content:"";}
 
         a {
                 color:				var(--fg1);
