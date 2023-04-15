@@ -10,14 +10,14 @@
 
 /* Font */
         @font-face {
-                font-family:			agave;
-                src:				url(../font/agavenerdmono.ttf);
+                font-family:			fantasque;
+                src:				url(../font/fantasque.ttf);
         }
 
 /* Desktop view */
         html {
                 align-items:			center;
-                font:				13px agave, monospace;
+                font:				14px fantasque, monospace;
                 line-height:			1.2;
                 display:			flex;
                 height:				100%;
@@ -55,24 +55,16 @@
                         background-color:	var(--purple);
                 }
 
-                        .hostdiags {
-                                color:		var(--purple);
-                                font-size:	11px;
-                        }
-
                 .folder {
                         color:			var(--bg0);
                         background-color:	var(--aqua);
                 }
 
-                        .folderdiags {
-                                color:		var(--aqua);
-                                font-size:	11px;
-                        }
+			.host:after, .folder:after {content:"";}
+			.host:before, .folder:before  {content:"";}
 
-                .slash {
+		.slash {
                         color:			var(--blue);
-                        font-size:		11px;
                 }
 
         a {
@@ -110,7 +102,7 @@
 			li:first-child::after {
 				content:	"";
 				position:	absolute;
-				right:		-1ch
+				right:		-1ch;
 			}
 
 				ul:nth-child(1n) li:first-child::after {color:var(--dred);}
@@ -147,7 +139,7 @@
         pre {
                 margin:				0 0 1em 0;
                 color:				var(--fg1);
-                font:				12px agave;
+                font:				14px fantasque;
         }
 	
 	main,
@@ -158,7 +150,7 @@
 /* Mobile view */
         @media screen and (max-width: 730px) {
                 html {
-                        font-size:		11px;
+                        font:			11px fantasque;
                 }
 
 		body {
