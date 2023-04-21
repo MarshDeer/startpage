@@ -142,6 +142,11 @@
 		backdrop-filter:		blur(1px);
 	}
 
+	::selection {
+		color:				var(--fg1);
+		background-color:		var(--dblue);
+	}
+
 /* Mobile view */
         @media screen and (max-width: 730px) {
                 html {
