@@ -67,6 +67,13 @@
                 text-decoration:		none;
         }
 
+                ul:nth-child(1n) a:hover {color:var(--red);}
+                ul:nth-child(2n) a:hover {color:var(--orange);}
+                ul:nth-child(3n) a:hover {color:var(--yellow);}
+                ul:nth-child(4n) a:hover {color:var(--aqua);}
+                ul:nth-child(5n) a:hover {color:var(--green);}
+                ul:nth-child(6n) a:hover {color:var(--blue);}
+                ul:nth-child(7n) a:hover {color:var(--purple);}
         ul {
                 list-style-type:		none;
                 margin:				0;
