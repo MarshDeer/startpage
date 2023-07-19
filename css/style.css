@@ -211,3 +211,10 @@
                 aside {
                         max-height:		8em;
                 }
+
+/* Accessibility */
+	@media (prefers-reduced-motion) {
+		#oneko {
+			display:		none;
+		}
+	}
