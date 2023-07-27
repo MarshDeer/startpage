@@ -41,6 +41,7 @@
                 min-width:			50vw;
                 padding:			2em;
                 float:				left;
+		padding:			2em 1ch 1em
         }
 
         p {
@@ -122,11 +123,10 @@
         }
 
         aside {
-                border:				2px solid var(--aqua);
                 float:				right;
-                overflow:			hidden;
                 width:				24ch;
 		opacity:			90%;
+		padding:			calc(1em + 2px) 0 0;
         }
 
                 aside img {
@@ -144,9 +144,10 @@
 	main,
 	aside {
 		backdrop-filter:		blur(1px);
-		box-shadow:			1ch 1em var(--dblue);
+		box-shadow:			1ch 1em var(--dpurple),
+						inset 0 calc(1em + 2px) var(--purple);
 		background-color:		var(--bg0t);
-                border:				2px solid var(--aqua);
+                border:				2px solid var(--purple);
 		border-radius:			3px;
 	}
 
@@ -155,6 +156,37 @@
 		background-color:		var(--dblue);
 	}
 
+	.titlebar {
+		position:			absolute;
+		top:				-3px;
+		left:				1px;
+		color:				var(--bg0);
+		width:				100%;
+	}
+
+		.titlebar::first-letter {
+			color:			var(--dpurple);
+			background-color:	var(--bg0);
+			padding:		2px;
+			border-radius:		10px;
+			font-size:		calc(1em - 2px);
+			line-height:		0.5;
+		}
+
+		.titlebar::after {
+			content:		"X";
+			position:		absolute;
+			top:			3px;
+			right:			1px;
+			width:			3ch;
+			height:			1em;
+			border-radius:		2px;
+			background-color:	var(--dred);
+			color:			var(--fg1);
+			text-align:		center;
+			line-height:		1;
+		}
+			
 /* Mobile view */
         @media screen and (max-width: 730px) {
                 html {
@@ -178,7 +210,7 @@
 
                 aside {
                         max-height:		12em;
-                        margin:			1em auto;
+                        margin:			2em auto;
                         float:			left;
                 }
 
