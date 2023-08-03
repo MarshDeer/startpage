@@ -149,6 +149,7 @@
 		background-color:		var(--bg0t);
                 border:				2px solid var(--purple);
 		border-radius:			3px;
+		position:			relative;
 	}
 
 	::selection {
@@ -162,29 +163,38 @@
 		left:				1px;
 		color:				var(--bg0);
 		width:				100%;
+		display:			flex;
+		gap:				2px;
 	}
 
-		.titlebar::first-letter {
-			color:			var(--dpurple);
+		.titlebar .icon {
+			color:			var(--fg1);
 			background-color:	var(--bg0);
 			padding:		2px;
-			border-radius:		10px;
-			font-size:		calc(1em - 2px);
-			line-height:		0.5;
+			border-radius:		5px;
+			height:			calc(1rem - 3px);
+			position:		relative;
+			top:			3px;
+			line-height:		0.5
 		}
 
-		.titlebar::after {
+		.titlebar .title {
+			flex:			1;
+		}
+
+		.titlebar .close {
 			content:		"X";
-			position:		absolute;
+			position:		relative;
 			top:			3px;
 			right:			1px;
 			width:			3ch;
 			height:			1em;
 			border-radius:		2px;
 			background-color:	var(--dred);
-			color:			var(--fg1);
+			color:			#ebdbb2;
 			text-align:		center;
 			line-height:		1;
+			justify-self:		flex-end;
 		}
 			
 /* Mobile view */
@@ -223,8 +233,6 @@
                         display:		none;
                 }
 
-                .hostdiags,
-                .folderdiags,
                 .slash {
                         font-size:		11px;
                 }
