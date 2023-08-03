@@ -255,8 +255,12 @@
                 }
 
 /* Accessibility */
-	@media (prefers-reduced-motion) {
+	@media screen and (prefers-reduced-motion) {
 		#oneko {
 			display:		none;
+		}
+
+		* {
+			transition:		none;
 		}
 	}
