@@ -57,9 +57,9 @@
 		.folder {background-color:var(--aqua);}
 		.slash {background-color:var(--blue);}
 
-			.host::before, .host::after, .folder::before, .folder::after, .slash::before, .slash::after {font-size:larger;}
-			.host::after, .folder::after, .slash::after {content:"";}
-			.host::before, .folder::before, .slash::before  {content:"";}
+			:where(.host, .folder, .slash)::before, :where(.host, .folder, .slash)::after {font-size:larger;}
+			:where(.host, .folder, .slash)::after {content:"";}
+			:where(.host, .folder, .slash)::before  {content:"";}
 
         a {
                 color:				var(--fg1);
